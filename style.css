@@ -1,0 +1,182 @@
+/* Color Hex Collection
+    #43A4BF
+    #2D6E80
+    #122c33 => main color
+    #163740
+    #122C33
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: 1rem/1.2rem 'Josefin Sans', sans-serif;
+    height: 100%;
+}
+
+body {
+    background-image: linear-gradient(to left top, #122c33, #15353d, #193e47, #1c4751, #20505c, #245966, #276270, #2b6b7a, #2f7586, #338092, #388a9e, #3c95ab);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.formLR {
+    width: 430px;
+    height: 430px;
+    perspective: 1000px;
+    transition: .6s;
+}
+
+.formLR h1 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.formLRContainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border: none;
+    border-radius: 1rem;
+    transition: all .6s;
+    transform-style: preserve-3d;
+}
+
+.formLogin,
+.formRegistration {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(255, 255, 255, .7);
+    backdrop-filter: blur(6px);
+    display: flex;
+    flex-direction: column;
+    padding: 2.2rem 2rem;
+    text-align: center;
+    color: #3d3d3d;
+    backface-visibility: hidden;
+    border-radius: 1rem;
+}
+
+/* Form Login Style */
+.formLogin {
+    gap: 1rem;
+}
+
+.email input,
+.password input,
+.name input {
+    width: 100%;
+    padding: .7rem;
+    border: none;
+    border-bottom: 2px solid #3d3d3d;
+    background-color: transparent;
+    outline: none;
+    font-size: .9rem;
+}
+
+.email h3,
+.password h3,
+.name h3 {
+    text-align: left;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox input {
+    margin-right: 3px;
+}
+
+.checkbox input:hover {
+    cursor: pointer;
+}
+
+.login,
+.registration {
+    background-image: linear-gradient(to left top, #122c33, #15353d, #193e47, #1c4751, #20505c, #245966, #276270, #2b6b7a, #2f7586, #338092, #388a9e, #3c95ab);
+    padding: 10px;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1.4rem;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    color: #fff;
+    transition: all 300ms;
+}
+
+.login:hover,
+.registration:hover {
+    cursor: pointer;
+    box-shadow: inset 1px 1px 5px 2px #122C33;
+}
+
+.cFContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: auto;
+}
+
+.cFContainer a {
+    color: #3d3d3d;
+    transition: 300ms;
+}
+
+.cFContainer a:hover {
+    cursor: pointer;
+    color: #757575;
+}
+
+.toRegistrationText span,
+.toLoginText span {
+    text-decoration: underline;
+    transition: 300ms;
+}
+
+.toRegistrationText span:hover,
+.toLoginText span:hover {
+    cursor: pointer;
+    color: #757575;
+}
+
+
+/* Form Registration Style */
+.formRegistration {
+    transform: rotateY(180deg);
+    gap: 1rem;
+}
+
+/* Media Queries */
+/* Laptop */
+@media( max-width: 1366px ) {
+    .formLR {
+        scale: .95;
+    }
+}
+
+/* Tablet */
+@media( max-width: 768px ) {
+    .formLR {
+        scale: .9;
+    }
+}
+
+/* Mobile */
+@media( max-width: 480px ) {
+    html {
+        font-size: 90%;
+    }
+    .formLR {
+        scale: .8;
+    }
+}
